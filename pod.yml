@@ -1,0 +1,11 @@
+kind: Pod  # kubectl api-resources
+apiVersion: v1
+metadata:
+ name: podx
+ namespace: default
+ labels:  # are like tags & are mandatory - tags/labels will help us identify a group of pods in cluster
+   role: app  ## here both key & value are your choice
+spec:
+ containers:
+   - name: cont1
+     image: httpd
